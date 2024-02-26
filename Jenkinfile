@@ -23,10 +23,6 @@ pipeline {
                     junit '**/target/surefire-reports/Test-*.xml'
                     jacoco(execPattern: '**/target/jacoco.exec')
                 }
-                failure {
-                    echo 'Build failed. Sending notification...'
-                    // Add any failure handling actions here
-                }
             }
         }
     }
