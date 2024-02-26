@@ -15,15 +15,17 @@ pipeline {
             }
         }
         stage('Test') {
-            steps {
-                bat 'mvn test'
-            }
-            post {
-                success {
-                    junit '**/target/surefire-reports/Test-*.xml'
-                    jacoco(execPattern: '**/target/jacoco.exec')
+                    steps {
+                        bat 'mvn test'
+                    }
+                    post {
+                        success {
+                            junit '**/target/surefire-reports/Test-*.xml'
+                            jacoco (execPattern: '**/target/jacoco.exec')
+                        }
+                    }
                 }
             }
-        }
-    }
+
+
 }
