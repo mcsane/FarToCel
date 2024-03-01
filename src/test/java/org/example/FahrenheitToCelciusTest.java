@@ -25,4 +25,9 @@ class FahrenheitToCelciusTest {
         assertEquals(100, FahrenheitToCelcius.kelvintoCel(372.15f));
         assertEquals(37, FahrenheitToCelcius.kelvintoCel(309.15f));
     }
+    @Test
+    void kelvintoFah() {
+        double test = Math.round(FahrenheitToCelcius.kelvintoFah(300.1));
+        assertEquals(81, test);
+    }
 }
