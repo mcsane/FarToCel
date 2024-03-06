@@ -44,7 +44,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>org.example.FahToCel</mainClass>
+              <mainClass>org.example.FahrToCel</mainClass>
             </manifest>
           </archive>
         </configuration>
